@@ -5,6 +5,10 @@
   border-bottom: 1px solid var(--col-background-20);
 }
 
+.unordered-list li:last-of-type {
+  border-bottom: none;
+}
+
 .unordered-list li:hover {
   background-color: var(--col-background-10);
 }
