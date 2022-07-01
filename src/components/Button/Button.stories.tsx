@@ -19,19 +19,18 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   children: "Button",
   disabled: false,
-  version: "secondary"
 };
 
 export const Muted = Template.bind({});
 Muted.args = {
   children: "Button",
   disabled: false,
-  version: "muted"
+  as: "muted"
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
   children: "Button",
   disabled: false,
-  version: "warning"
+  as: "warning"
 };
