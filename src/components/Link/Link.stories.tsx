@@ -5,11 +5,16 @@ import Link from './Link'
 export default {
   title: 'Sousanne/Link',
   component: Link,
+  argTypes: {
+    children: {
+      control: { type: null }
+    },
+  }
 } as ComponentMeta<typeof Link>
 
 const Template: ComponentStory<typeof Link> = (args) => <Link {...args} />
 
 export const Default = Template.bind({})
 Link.args = {
-  text: 'link',
+  children: 'Link',
 }

@@ -1,17 +1,19 @@
 .link {
   text-decoration: none;
-  cursor:  pointer;
+  cursor: pointer;
+  display: inline-flex;
   outline: 3px solid transparent;
   outline-offset: 0;
   color: var(--col-interactive);
-  padding:  var(--spacing-2xs);
+  padding: var(--spacing-2xs);
   transition: 0.25s ease-in-out color,
               0.25s ease-in-out outline-offset,
               0.25s ease-in-out outline;
 }
 
-.link:hover {
-  color:  var(--col-interactive-hover);
+.link:hover,
+.link:focus {
+  color: var(--col-interactive-hover);
   outline: 3px solid var(--col-interactive);
   outline-offset:  var(--spacing-2xs);
   transition: 0.125s ease-in-out color,
@@ -20,5 +22,6 @@
 }
 
 .link.Inline {
-  display:  inline-block;
+  padding: 0;
+  text-decoration: underline;
 }

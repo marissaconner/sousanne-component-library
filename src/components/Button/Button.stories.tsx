@@ -1,36 +1,36 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button";
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import Button from './Button'
 
 export default {
-  title: "Sousanne/Button",
+  title: 'Sousanne/Button',
   component: Button,
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Button>
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 Primary.args = {
-  children: "Button",
-  as: "primary"
-};
+  children: 'Button',
+  look: 'primary'
+}
 
-export const Secondary = Template.bind({});
+export const Secondary = Template.bind({})
 Secondary.args = {
-  children: "Button",
+  children: 'Button',
   disabled: false,
-};
+}
 
-export const Muted = Template.bind({});
+export const Muted = Template.bind({})
 Muted.args = {
-  children: "Button",
+  children: 'Button',
   disabled: false,
-  as: "muted"
-};
+  look: 'muted'
+}
 
-export const Warning = Template.bind({});
+export const Warning = Template.bind({})
 Warning.args = {
-  children: "Button",
+  children: 'Button',
   disabled: false,
-  as: "warning"
-};
+  look: 'warning'
+}
