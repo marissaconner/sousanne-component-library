@@ -17,4 +17,11 @@ const Template: ComponentStory<typeof Link> = (args) => <Link {...args} />
 export const Default = Template.bind({})
 Link.args = {
   children: 'Link',
+  inline: false
+}
+
+export const InlineLink = Template.bind({})
+InlineLink.args = {
+  children: 'Link',
+  inline: true
 }
