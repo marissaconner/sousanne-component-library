@@ -6,28 +6,35 @@
   padding: var(--spacing-sm) var(--spacing-md);
   border:  2px solid transparent;
   margin: -2px;
-  transition: 0.125s ease-in-out background-color,
-              0.325s ease-in-out border,
-              0.125s ease-in-out color,
-              0.125s ease-in-out outline;
-
+  transition: 0.25s ease-in-out background-color,
+              0.25s ease-in-out border,
+              0.25s ease-in-out color,
+              0.25s ease-in-out box-shadow;
 }
 
 .button:hover {
   background-color: var(--col-button-hover);
   cursor:  pointer;
   transition: 0.125s ease-in-out background-color,
-              0.25s ease-in-out border,
-              0.125s ease-in-out color,
-              0.125s ease-in-out box-shadow;
+              0.125s ease-in-out border,
+              0.125s ease-in-out color;
+              
 }
 
 .button:focus {
   box-shadow: 0px 0px 0 2px var(--col-background), -0px 0px 0 5px var(--col-interactive);
+   transition: 0.125s ease-in-out box-shadow;
+  outline: none;
 }
 
 .button.Primary {
   background-color: var(--col-button-primary);
+}
+.button.Primary:hover {
+  background-color: var(--col-button-primary-hover);
+}
+.button.Primary:active {
+  background-color: var(--col-button-primary-active);
 }
 
 .button.Warning {
@@ -35,6 +42,9 @@
 }
 .button.Warning:hover {
   background-color: var(--col-button-warning-hover);
+}
+.button.Warning:hover {
+  background-color: var(--col-button-warning-active);
 }
 
 .button.Muted {
@@ -46,6 +56,10 @@
 .button.Muted:hover {
   border-color: var(--col-button-hover);
   color: var(--col-button-hover);
+}
+.button.Muted:active {
+  border-color: var(--col-button-active);
+  color: var(--col-button-active);
 }
 
 .button.Muted.Disabled {

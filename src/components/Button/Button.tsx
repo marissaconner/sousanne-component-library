@@ -15,7 +15,7 @@ interface ButtonProps {
    * "warning": denotes the button destroys data, e.g. 'delete'.
    * "muted": For coupling with primary buttons as the 'backward' step.
    */
-  type?: 'primary' | 'default' | 'muted' | 'warning'
+  type?: 'primary' | 'default' | 'muted' | 'warning' | undefined
   /**
    * Optional
    */
@@ -30,8 +30,7 @@ const Button = ({type = 'default', label, disabled, ...props}: ButtonProps) => {
   return(
     <button
       disabled={disabled}
-      type={type}
-      className={classNames({
+        className={classNames({
         button: true,
         'Disabled': !!disabled,
         'Muted': type === 'muted',

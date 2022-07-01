@@ -85,6 +85,8 @@
   --col-button-warning-active:  var(--color-button-warning-active, var(--swatch-red-70));
 
   --col-interactive:  var(--color-interactive, var(--swatch-cyan-40));
+  --col-interactive-hover:  var(--color-interactive, var(--swatch-cyan-50));
+  --col-interactive-actove:  var(--color-interactive, var(--swatch-cyan-60));
 
   }
 
