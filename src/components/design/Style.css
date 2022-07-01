@@ -46,7 +46,7 @@
   --swatch-white: #fff;
   --swatch-black: #004040;
 
-  --base-size: 1rem;
+  --base-size: 1.16rem;
   --base-scaler:  1.6;
   --base-line-height-body: 1.4;
   --base-line-height-header:  1.3;
@@ -64,6 +64,10 @@
   --spacing-2xl: calc(var(--base-size) * var(--scaler-pow-3));
   --spacing-3xl: calc(var(--base-size) * var(--scaler-pow-4));
 
+  --size-font-sm: calc(var(--base-size) / var(--base-scaler));
+  --size-font-md: var(--base-size);
+  --size-font-lg: calc(var(--base-size) * var(--base-scaler));
+
   --size-border-radius: var(--border-radius, var(--spacing-xs));
 
   --col-text: var(--color-text, var(--swatch-gray-100));
@@ -71,6 +75,17 @@
   --col-text: var(--color-text, var(--swatch-gray-80));
   --col-text-inverse: var(--color-text-inverse, var(--swatch-white));
   --col-background: var(--color-background, var(--swatch-white));
+  
+  --col-background-10: var(--color-background-10, var(--swatch-gray-10));
+  --col-background-20: var(--color-background-20, var(--swatch-gray-20));
+  --col-background-30: var(--color-background-30, var(--swatch-gray-30));
+  --col-background-40: var(--color-background-40, var(--swatch-gray-40));
+  --col-background-50: var(--color-background-50, var(--swatch-gray-50));
+  --col-background-60: var(--color-background-60, var(--swatch-gray-60));
+  --col-background-70: var(--color-background-70, var(--swatch-gray-70));
+  --col-background-80: var(--color-background-80, var(--swatch-gray-80));
+  --col-background-90: var(--color-background-90, var(--swatch-gray-90));
+  --col-background-100: var(--color-background-100, var(--swatch-gray-100));
 
   --col-disabled: var(--color-disabled, var(--swatch-gray-20));
 
@@ -105,6 +120,7 @@ div, p, span, a, rt, rp, dfn, abbr, q, cite, em, time, var,
 samp, i, b, sub, sup, small, strong, mark, ruby, ins, del,
 bdi, bdo, s, kbd, wbr {
   font-family: Tahoma,Verdana,Segoe,sans-serif; 
+  font-size: var(--base-size);
 }
 
 h1, h2, h3, h4, h5, h6 {

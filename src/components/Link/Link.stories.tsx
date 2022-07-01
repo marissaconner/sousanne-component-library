@@ -15,7 +15,7 @@ export default {
 const Template: ComponentStory<typeof Link> = (args) => <Link {...args} />
 
 export const Default = Template.bind({})
-Link.args = {
+Default.args = {
   children: 'Link',
   inline: false
 }

@@ -52,8 +52,7 @@ const Button = ({
           onClick()
         }
       }}
-      className={`${classes} ${classNames({
-        button: true,
+      className={`button ${classes} ${classNames({
         'Disabled': !!disabled,
         'Muted': look === 'muted',
         'Primary': look ==='primary',

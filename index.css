@@ -3,7 +3,7 @@
   --swatch-gray-90: #424242;
   --swatch-gray-80: #505050;
   --swatch-gray-70: #636363;
-  --swatch-gray-60: #7f7f7f;
+  --swatch-gray-60: #767775;
   --swatch-gray-50: #959595;
   --swatch-gray-40: #a3a3a3;
   --swatch-gray-30: #c3c3c3;
@@ -14,7 +14,7 @@
   --swatch-cyan-90: #0e4a46;
   --swatch-cyan-80: #115a55;
   --swatch-cyan-70: #146e68;
-  --swatch-cyan-60: #198e86;
+  --swatch-cyan-60: #17856D;
   --swatch-cyan-50: #1da69e;
   --swatch-cyan-40: #24b6ae;
   --swatch-cyan-30: #4bd7cf;
@@ -25,7 +25,7 @@
   --swatch-lime-90: #124d0f;
   --swatch-lime-80: #165d12;
   --swatch-lime-70: #1b7316;
-  --swatch-lime-60: #24931d;
+  --swatch-lime-60: #22881B;
   --swatch-lime-50: #2dab24;
   --swatch-lime-40: #34bc2b;
   --swatch-lime-30: #49df41;
@@ -36,14 +36,14 @@
   --swatch-red-90: #82181d;
   --swatch-red-80: #9d1c23;
   --swatch-red-70: #ba2b32;
-  --swatch-red-60: #d95056;
+  --swatch-red-60: #D53F46;
   --swatch-red-50: #e77075;
   --swatch-red-40: #eb878c;
   --swatch-red-30: #f3b4b7;
   --swatch-red-20: #f9dbdd;
   --swatch-red-10: #fcf0f0;
 
-  --swatch-white: #fdfdfd;
+  --swatch-white: #fff;
   --swatch-black: #004040;
 
   --base-size: 1rem;
@@ -67,34 +67,37 @@
   --size-border-radius: var(--border-radius, var(--spacing-xs));
 
   --col-text: var(--color-text, var(--swatch-gray-100));
-  --col-text-on-color:  var(--color-text-on-color, var(--swatch-white));
+  
+  --col-text: var(--color-text, var(--swatch-gray-80));
+  --col-text-inverse: var(--color-text-inverse, var(--swatch-white));
   --col-background: var(--color-background, var(--swatch-white));
 
   --col-disabled: var(--color-disabled, var(--swatch-gray-20));
 
-  --col-button: var(--color-button, var(--swatch-cyan-60));
-  --col-button-hover: var(--color-button-hover, var(--swatch-cyan-70));
-  --col-button-active: var(--color-button-active, var(--swatch-cyan-80));
+  --col-button: var(--color-button, var(--swatch-cyan-20));
+  --col-button-hover: var(--color-button-hover, var(--swatch-cyan-30));
+  --col-button-active: var(--color-button-active, var(--swatch-cyan-30));
+  --col-button-label:  var(--color-button-label, var(--col-text));
 
-  --col-button-primary:  var(--color-button-primary, var(--swatch-lime-50));
-  --col-button-primary-hover:  var(--color-button-primary-hover, var(--swatch-lime-60));
+  --col-button-primary:  var(--color-button-primary, var(--swatch-lime-60));
+  --col-button-primary-hover:  var(--color-button-primary-hover, var(--swatch-lime-70));
   --col-button-primary-active:  var(--color-button-primary-active, var(--swatch-lime-70));
+  --col-button-primary-label:  var(--color-button-primary-label, var(--col-text-inverse));
 
-  --col-button-warning:  var(--color-button-warning, var(--swatch-red-50));
-  --col-button-warning-hover:  var(--color-button-warning-hover, var(--swatch-red-60));
+  --col-button-warning:  var(--color-button-warning, var(--swatch-red-60));
+  --col-button-warning-hover:  var(--color-button-warning-hover, var(--swatch-red-70));
   --col-button-warning-active:  var(--color-button-warning-active, var(--swatch-red-70));
+  --col-button-warning-label:  var(--color-button-warning-label, var(--col-text-inverse));
 
-  --col-interactive:  var(--color-interactive, var(--swatch-cyan-40));
-  --col-interactive-hover:  var(--color-interactive, var(--swatch-cyan-50));
-  --col-interactive-actove:  var(--color-interactive, var(--swatch-cyan-60));
-
-  }
+  --col-interactive:  var(--color-interactive, var(--swatch-cyan-60));
+  --col-interactive-hover:  var(--color-interactive, var(--swatch-cyan-70));
+  --col-interactive-active:  var(--color-interactive, var(--swatch-cyan-70));
+}
 
 * {
   margin: 0;
   padding: 0;
   color: var(--col-text);
-  background: var(--col-background);
   box-sizing: border-box;
 }
 
@@ -112,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing:  border-box;
   letter-spacing: 0.5px;
   background-color:  var(--col-button);
-  color:  var(--col-text-on-color);
+  color:  var(--col-button-label);
   padding: var(--spacing-sm) var(--spacing-md);
   border:  2px solid transparent;
   margin: -2px;
@@ -128,17 +131,19 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.125s ease-in-out background-color,
               0.125s ease-in-out border,
               0.125s ease-in-out color;
-              
 }
 
 .button:focus {
   box-shadow: 0px 0px 0 2px var(--col-background), -0px 0px 0 5px var(--col-interactive);
-   transition: 0.125s ease-in-out box-shadow;
+  transition: 0.25s ease-in-out background-color,
+               0.125s ease-in-out box-shadow,
+               0.25s ease-in-out color;
   outline: none;
 }
 
 .button.Primary {
   background-color: var(--col-button-primary);
+  color: var(--col-button-primary-label);
 }
 .button.Primary:hover {
   background-color: var(--col-button-primary-hover);
@@ -149,6 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .button.Warning {
   background-color: var(--col-button-warning);
+  color: var(--col-button-warning-label);
 }
 .button.Warning:hover {
   background-color: var(--col-button-warning-hover);
@@ -159,17 +165,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .button.Muted {
   background-color: transparent;
-  border-color: var(--col-button);
-  color: var(--col-button);
-  border-color:  var(--col-button);
+  border-color: var(--col-interactive);
+  color: var(--col-interactive);
 }
 .button.Muted:hover {
   border-color: var(--col-button-hover);
-  color: var(--col-button-hover);
-}
-.button.Muted:active {
-  border-color: var(--col-button-active);
-  color: var(--col-button-active);
+  color: var(--col-button-label);
+  background-color: var(--col-button-hover);
 }
 
 .button.Muted.Disabled {
@@ -180,6 +182,6 @@ h1, h2, h3, h4, h5, h6 {
 .button.Disabled {
   background-color: var(--col-disabled);
   border-color:  var(--col-disabled);
-  color:  var(--col-text-on-color);
+  color:  var(--col-text-on-70-to-100);
   pointer-events: none;
 }

@@ -19,19 +19,19 @@ export const Primary = Template.bind({})
 Primary.args = {
   children: 'Button',
   disabled: false,
-  look: 'primary'
+  look: 'primary',
 }
 
 export const Muted = Template.bind({})
 Muted.args = {
   children: 'Button',
   disabled: false,
-  look: 'muted'
+  look: 'muted',
 }
 
 export const Warning = Template.bind({})
 Warning.args = {
   children: 'Button',
   disabled: false,
-  look: 'warning'
+  look: 'warning',
 }

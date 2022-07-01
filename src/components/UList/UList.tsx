@@ -1,6 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 import '../design/Style.css'
+import './UList.css'
+import Link from '../Link/Link'
 
 export interface UListProps {
   /**
@@ -13,12 +15,11 @@ export interface UListProps {
 }
 
 const UList = ({
-  children = 'Link',
+  children,
   classes,
-  ...props
-}: UListProps) => {
+  ...props}: UListProps) => {
   return(
-    <ul class="unordered-list">
+    <ul className={`unordered-list ${classes}`}>
       {children}
     </ul>
   )
