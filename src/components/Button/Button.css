@@ -18,7 +18,6 @@
   transition: 0.125s ease-in-out background-color,
               0.125s ease-in-out border,
               0.125s ease-in-out color;
-              
 }
 
 .button:focus {
