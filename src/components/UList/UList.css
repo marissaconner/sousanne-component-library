@@ -1,7 +1,7 @@
 .unordered-list li {
   list-style-type: none;
   background-color: var(--col-background);
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: var(--spacing-sm) 0;
   border-bottom: 1px solid var(--col-background-20);
 }
 

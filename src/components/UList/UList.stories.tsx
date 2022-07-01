@@ -5,11 +5,11 @@ import Link from '../Link/Link'
 export default {
   title: 'Components/UList',
   component: UList,
-  // argTypes: {
-  //   children: {
-  //     control: { type: null }
-  //   },
-  // }
+  argTypes: {
+    children: {
+      control: { type: null }
+    },
+  }
 } as ComponentMeta<typeof UList>
 
 const Template: ComponentStory<typeof UList> = (args) => <UList {...args} />

@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 import '../design/Style.css'
 import './UList.css'
-import Link from '../Link/Link'
 
 export interface UListProps {
   /**
