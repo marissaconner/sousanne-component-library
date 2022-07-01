@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Link from './Link'
 
 export default {
-  title: 'Sousanne/Link',
+  title: 'Components/Link',
   component: Link,
   argTypes: {
     children: {

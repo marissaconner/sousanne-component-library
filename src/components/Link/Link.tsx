@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import Style from '../design/Style'
 import '../design/Style.css'
 import './Link.css'
 
