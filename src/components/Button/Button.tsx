@@ -6,10 +6,7 @@ import './Button.css'
 
 
 interface ButtonProps {
-  /**
-   * Button labels should always be in Sentence case.
-  */
-  label: string
+  children: node
   /**
    * "primary": highlights the next logical step forward.
    * "warning": denotes the button destroys data, e.g. 'delete'.
@@ -24,21 +21,28 @@ interface ButtonProps {
    * Optional
    */ 
   onClick?: () => void
+  /**
+   * Button content
+  * */
+  /**
+   * optional additional styling
+  * */
+  classes?: string
 }
 
-const Button = ({type = 'default', label, disabled, ...props}: ButtonProps) => {
+const Button = ({type = 'default', children, classes, disabled, ...props}: ButtonProps) => {
   return(
     <button
       disabled={disabled}
-        className={classNames({
+        className={`${classes} ${classNames({
         button: true,
         'Disabled': !!disabled,
         'Muted': type === 'muted',
         'Primary': type ==='primary',
         'Warning': type === 'warning'
-      })}
+      })}`}
     >
-      {label}
+      {children}
     </button>
   )
 }
