@@ -22,7 +22,9 @@
 
 .button:focus {
   box-shadow: 0px 0px 0 2px var(--col-background), -0px 0px 0 5px var(--col-interactive);
-   transition: 0.125s ease-in-out box-shadow;
+  transition: 0.25s ease-in-out background-color,
+               0.125s ease-in-out box-shadow,
+               0.25s ease-in-out color;
   outline: none;
 }
 

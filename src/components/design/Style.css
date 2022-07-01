@@ -89,11 +89,10 @@
   --col-button-warning-active:  var(--color-button-warning-active, var(--swatch-red-70));
   --col-button-warning-label:  var(--color-button-warning-label, var(--col-text-inverse));
 
-  --col-interactive:  var(--color-interactive, var(--swatch-cyan-40));
-  --col-interactive-hover:  var(--color-interactive, var(--swatch-cyan-50));
-  --col-interactive-active:  var(--color-interactive, var(--swatch-cyan-60));
-
-  }
+  --col-interactive:  var(--color-interactive, var(--swatch-cyan-60));
+  --col-interactive-hover:  var(--color-interactive, var(--swatch-cyan-70));
+  --col-interactive-active:  var(--color-interactive, var(--swatch-cyan-70));
+}
 
 * {
   margin: 0;
