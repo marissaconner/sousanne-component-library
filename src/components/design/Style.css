@@ -1,60 +1,50 @@
 :root {
-  --swatch-gray-100: #080808;
-  --swatch-gray-90: #2b2b2b;
-  --swatch-gray-80: #424242;
-  --swatch-gray-70: #595959;
-  --swatch-gray-60: #767676;
+  --swatch-gray-100: #262626;
+  --swatch-gray-90: #424242;
+  --swatch-gray-80: #505050;
+  --swatch-gray-70: #636363;
+  --swatch-gray-60: #7f7f7f;
   --swatch-gray-50: #959595;
-  --swatch-gray-40: #acacac;
+  --swatch-gray-40: #a3a3a3;
   --swatch-gray-30: #c3c3c3;
-  --swatch-gray-20: #e5e5e5;
+  --swatch-gray-20: #e1e1e1;
   --swatch-gray-10: #f3f3f3;
 
-  --swatch-red-100: #180205;
-  --swatch-red-90: #5b0912;
-  --swatch-red-80: #870d1a;
-  --swatch-red-70: #b11223;
-  --swatch-red-60: #cd4856;
-  --swatch-red-50: #da7883;
-  --swatch-red-40: #e399a1;
-  --swatch-red-30: #ebb7bc;
-  --swatch-red-20: #f7e0e3;
-  --swatch-red-10: #fbf1f2;
+  --swatch--100: #082b29;
+  --swatch-cyan-90: #0e4a46;
+  --swatch-cyan-80: #115a55;
+  --swatch-cyan-70: #146e68;
+  --swatch-cyan-60: #198e86;
+  --swatch-cyan-50: #1da69e;
+  --swatch-cyan-40: #24b6ae;
+  --swatch-cyan-30: #4bd7cf;
+  --swatch-cyan-20: #a0f0eb;
+  --swatch-cyan-10: #dffaf8;
 
-  --swatch-orange-100: #100600;
-  --swatch-orange-90: #4c1e00;
-  --swatch-orange-80: #712e00;
-  --swatch-orange-70: #973d00;
-  --swatch-orange-60: #c95100;
-  --swatch-orange-50: #fc6500;
-  --swatch-orange-40: #fe9047;
-  --swatch-orange-30: #ffb380;
-  --swatch-orange-20: #ffdbc2;
-  --swatch-orange-10: #fff2e9;
+  --swatch-lime-100: #0b2d09;
+  --swatch-lime-90: #124d0f;
+  --swatch-lime-80: #165d12;
+  --swatch-lime-70: #1b7316;
+  --swatch-lime-60: #24931d;
+  --swatch-lime-50: #2dab24;
+  --swatch-lime-40: #34bc2b;
+  --swatch-lime-30: #49df41;
+  --swatch-lime-20: #abf3a7;
+  --swatch-lime-10: #e1fbe0;
 
-  --swatch-yellow-100: #0c0700;
-  --swatch-yellow-90: #402600;
-  --swatch-yellow-80: #5f3a00;
-  --swatch-yellow-70: #814d00;
-  --swatch-yellow-60: #ab6700;
-  --swatch-yellow-50: #d58100;
-  --swatch-yellow-40: #f89500;
-  --swatch-yellow-30: #feb649;
-  --swatch-yellow-20: #ffdca7;
-  --swatch-yellow-10: #fff1dc;
-
-  --swatch-blue-100: #000a0d;
-  --swatch-blue-90: #003041;
-  --swatch-blue-80: #004861;
-  --swatch-blue-70: #016081;
-  --swatch-blue-60: #017fab;
-  --swatch-blue-50: #01a0d6;
-  --swatch-blue-40: #30baea;
-  --swatch-blue-30: #71d0f0;
-  --swatch-blue-20: #bae8f8;
-  --swatch-blue-10: #e5f6fc;
+  --swatch-red-100: #4e0e11;
+  --swatch-red-90: #82181d;
+  --swatch-red-80: #9d1c23;
+  --swatch-red-70: #ba2b32;
+  --swatch-red-60: #d95056;
+  --swatch-red-50: #e77075;
+  --swatch-red-40: #eb878c;
+  --swatch-red-30: #f3b4b7;
+  --swatch-red-20: #f9dbdd;
+  --swatch-red-10: #fcf0f0;
 
   --swatch-white: #fdfdfd;
+  --swatch-black: #004040;
 
   --base-size: 1rem;
   --base-scaler:  1.6;
@@ -82,9 +72,20 @@
 
   --col-disabled: var(--color-disabled, var(--swatch-gray-20));
 
-  --col-button-primary:  var(--color-button-primary, var(--swatch-orange-60));
-  --col-button-primary-hover:  var(--color-button-primary-hover, var(--swatch-orange-70));
-  --col-button-primary-active:  var(--color-button-primary-active, var(--swatch-orange-80));
+  --col-button: var(--color-button, var(--swatch-cyan-60));
+  --col-button-hover: var(--color-button-hover, var(--swatch-cyan-70));
+  --col-button-active: var(--color-button-active, var(--swatch-cyan-80));
+
+  --col-button-primary:  var(--color-button-primary, var(--swatch-lime-50));
+  --col-button-primary-hover:  var(--color-button-primary-hover, var(--swatch-lime-60));
+  --col-button-primary-active:  var(--color-button-primary-active, var(--swatch-lime-70));
+
+  --col-button-warning:  var(--color-button-warning, var(--swatch-red-50));
+  --col-button-warning-hover:  var(--color-button-warning-hover, var(--swatch-red-60));
+  --col-button-warning-active:  var(--color-button-warning-active, var(--swatch-red-70));
+
+  --col-interactive:  var(--color-interactive, var(--swatch-cyan-40));
+
   }
 
 * {

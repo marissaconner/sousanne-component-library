@@ -11,6 +11,21 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  label: "Hi there",
-  disabled: false
+  label: "Button",
+  disabled: false,
+  type: "primary"
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: "Button",
+  disabled: false,
+  type: "secondary"
+};
+
+export const Ghost = Template.bind({});
+Ghost.args = {
+  label: "Button",
+  disabled: false,
+  type: "ghost"
 };
