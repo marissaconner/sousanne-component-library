@@ -1,0 +1,106 @@
+:root {
+  --swatch-gray-100: #080808;
+  --swatch-gray-90: #2b2b2b;
+  --swatch-gray-80: #424242;
+  --swatch-gray-70: #595959;
+  --swatch-gray-60: #767676;
+  --swatch-gray-50: #959595;
+  --swatch-gray-40: #acacac;
+  --swatch-gray-30: #c3c3c3;
+  --swatch-gray-20: #e5e5e5;
+  --swatch-gray-10: #f3f3f3;
+
+  --swatch-red-100: #180205;
+  --swatch-red-90: #5b0912;
+  --swatch-red-80: #870d1a;
+  --swatch-red-70: #b11223;
+  --swatch-red-60: #cd4856;
+  --swatch-red-50: #da7883;
+  --swatch-red-40: #e399a1;
+  --swatch-red-30: #ebb7bc;
+  --swatch-red-20: #f7e0e3;
+  --swatch-red-10: #fbf1f2;
+
+  --swatch-orange-100: #100600;
+  --swatch-orange-90: #4c1e00;
+  --swatch-orange-80: #712e00;
+  --swatch-orange-70: #973d00;
+  --swatch-orange-60: #c95100;
+  --swatch-orange-50: #fc6500;
+  --swatch-orange-40: #fe9047;
+  --swatch-orange-30: #ffb380;
+  --swatch-orange-20: #ffdbc2;
+  --swatch-orange-10: #fff2e9;
+
+  --swatch-yellow-100: #0c0700;
+  --swatch-yellow-90: #402600;
+  --swatch-yellow-80: #5f3a00;
+  --swatch-yellow-70: #814d00;
+  --swatch-yellow-60: #ab6700;
+  --swatch-yellow-50: #d58100;
+  --swatch-yellow-40: #f89500;
+  --swatch-yellow-30: #feb649;
+  --swatch-yellow-20: #ffdca7;
+  --swatch-yellow-10: #fff1dc;
+
+  --swatch-blue-100: #000a0d;
+  --swatch-blue-90: #003041;
+  --swatch-blue-80: #004861;
+  --swatch-blue-70: #016081;
+  --swatch-blue-60: #017fab;
+  --swatch-blue-50: #01a0d6;
+  --swatch-blue-40: #30baea;
+  --swatch-blue-30: #71d0f0;
+  --swatch-blue-20: #bae8f8;
+  --swatch-blue-10: #e5f6fc;
+
+  --swatch-white: #fdfdfd;
+
+  --base-size: 1rem;
+  --base-scaler:  1.6;
+  --base-line-height-body: 1.4;
+  --base-line-height-header:  1.3;
+  --scaler-pow-2: calc( var(--base-scaler) * var(--base-scaler));
+  --scaler-pow-3: calc( var(--scaler-pow-2) * var(--base-scaler));
+  --scaler-pow-4: calc( var(--scaler-pow-3) * var(--base-scaler));
+
+  --spacing-3xs: calc(var(--base-size) / var(--scaler-pow-4));
+  --spacing-2xs: calc(var(--base-size) / var(--scaler-pow-3));
+  --spacing-xs: calc(var(--base-size) / var(--scaler-pow-2));
+  --spacing-sm: calc(var(--base-size) / var(--base-scaler));
+  --spacing-md: var(--base-size);
+  --spacing-lg: calc(var(--base-size) * var(--base-scaler));
+  --spacing-xl: calc(var(--base-size) * var(--scaler-pow-2));
+  --spacing-2xl: calc(var(--base-size) * var(--scaler-pow-3));
+  --spacing-3xl: calc(var(--base-size) * var(--scaler-pow-4));
+
+  --size-border-radius: var(--border-radius, var(--spacing-xs));
+
+  --col-text: var(--color-text, var(--swatch-gray-100));
+  --col-text-on-color:  var(--color-text-on-color, var(--swatch-white));
+  --col-background: var(--color-background, var(--swatch-white));
+
+  --col-disabled: var(--color-disabled, var(--swatch-gray-20));
+
+  --col-button-primary:  var(--color-button-primary, var(--swatch-orange-60));
+  --col-button-primary-hover:  var(--color-button-primary-hover, var(--swatch-orange-70));
+  --col-button-primary-active:  var(--color-button-primary-active, var(--swatch-orange-80));
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--col-text);
+  background: var(--col-background);
+  box-sizing: border-box;
+}
+
+div, p, span, a, rt, rp, dfn, abbr, q, cite, em, time, var,
+samp, i, b, sub, sup, small, strong, mark, ruby, ins, del,
+bdi, bdo, s, kbd, wbr {
+  font-family: Tahoma,Verdana,Segoe,sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Tahoma,Verdana,Segoe,sans-serif;
+}

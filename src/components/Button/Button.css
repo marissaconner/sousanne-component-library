@@ -1,0 +1,23 @@
+button {
+  border-radius: var(--size-border-radius);
+  background-color:  var(--col-button-primary);
+  color:  var(--col-text-on-color);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--col-button-primary);
+  transition: 0.125s ease-in-out background-color,
+              0.125s ease-in-out border;
+}
+
+button:hover {
+  background-color: var(--col-button-primary-hover);
+  border-color: var(--col-button-primary-hover);
+  cursor:  pointer;
+  transition: 0.125s ease-in-out background-color,
+              0.125s ease-in-out border;
+}
+
+button[disabled] {
+  background-color: var(--col-disabled);
+  border-color:  var(--col-disabled);
+  pointer-events: none;
+}
