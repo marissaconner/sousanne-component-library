@@ -6,13 +6,27 @@ import './Button.css'
 
 
 interface ButtonProps {
+  /**
+   * Button labels should always be in Sentence case.
+  */
   label: string
-  type?: 'primary' | 'secondary' | 'ghost' | 'warning'
+  /**
+   * "primary": highlights the next logical step forward.
+   * "warning": denotes the button destroys data, e.g. 'delete'.
+   * "muted": For coupling with primary buttons as the 'backward' step.
+   */
+  type?: 'primary' | 'default' | 'muted' | 'warning'
+  /**
+   * Optional
+   */
   disabled?: boolean
+  /** 
+   * Optional
+   */ 
   onClick?: () => void
 }
 
-const Button = ({type = 'secondary', label, disabled, ...props}: ButtonProps) => {
+const Button = ({type = 'default', label, disabled, ...props}: ButtonProps) => {
   return(
     <button
       disabled={disabled}
@@ -20,7 +34,7 @@ const Button = ({type = 'secondary', label, disabled, ...props}: ButtonProps) =>
       className={classNames({
         button: true,
         'Disabled': !!disabled,
-        'Ghost': type === 'ghost',
+        'Muted': type === 'muted',
         'Primary': type ==='primary',
         'Warning': type === 'warning'
       })}

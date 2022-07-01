@@ -23,9 +23,16 @@ Secondary.args = {
   type: "secondary"
 };
 
-export const Ghost = Template.bind({});
-Ghost.args = {
+export const Muted = Template.bind({});
+Muted.args = {
   label: "Button",
   disabled: false,
-  type: "ghost"
+  type: "muted"
+};
+
+export const Warning = Template.bind({});
+Warning.args = {
+  label: "Button",
+  disabled: false,
+  type: "warning"
 };

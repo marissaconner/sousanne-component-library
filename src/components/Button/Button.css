@@ -37,18 +37,18 @@
   background-color: var(--col-button-warning-hover);
 }
 
-.button.Ghost {
+.button.Muted {
   background-color: transparent;
   border-color: var(--col-button);
   color: var(--col-button);
   border-color:  var(--col-button);
 }
-.button.Ghost:hover {
+.button.Muted:hover {
   border-color: var(--col-button-hover);
   color: var(--col-button-hover);
 }
 
-.button.Ghost.Disabled {
+.button.Muted.Disabled {
   background-color: transparent;
   color: var(--col-disabled);
 }
