@@ -16,7 +16,7 @@ const UList = ({
   children = 'Link',
   classes,
   ...props
-}:UListProps) => {
+}: UListProps) => {
   return(
     <ul class="unordered-list">
       {children}
