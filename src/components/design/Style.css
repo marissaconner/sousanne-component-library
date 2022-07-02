@@ -72,11 +72,11 @@
 
   --col-text: var(--color-text, var(--swatch-gray-100));
   --col-text-secondary: var(--color-text-secondary, var(--swatch-gray-60));
-  
+
   --col-text: var(--color-text, var(--swatch-gray-80));
   --col-text-inverse: var(--color-text-inverse, var(--swatch-white));
+
   --col-background: var(--color-background, var(--swatch-white));
-  
   --col-background-10: var(--color-background-10, var(--swatch-gray-10));
   --col-background-20: var(--color-background-20, var(--swatch-gray-20));
   --col-background-30: var(--color-background-30, var(--swatch-gray-30));
@@ -87,8 +87,6 @@
   --col-background-80: var(--color-background-80, var(--swatch-gray-80));
   --col-background-90: var(--color-background-90, var(--swatch-gray-90));
   --col-background-100: var(--color-background-100, var(--swatch-gray-100));
-
-  --col-disabled: var(--color-disabled, var(--swatch-gray-20));
 
   --col-button: var(--color-button, var(--swatch-cyan-20));
   --col-button-hover: var(--color-button-hover, var(--swatch-cyan-30));
@@ -105,10 +103,9 @@
   --col-button-warning-active: var(--color-button-warning-active, var(--swatch-red-70));
   --col-button-warning-label: var(--color-button-warning-label, var(--col-text-inverse));
 
-  --col-interactive: var(--color-interactive, var(--swatch-cyan-60));
-  --col-interactive-hover: var(--color-interactive, var(--swatch-cyan-70));
-  --col-interactive-active: var(--color-interactive, var(--swatch-cyan-70));
-
+  --col-interactive-01: var(--color-interactive-01, var(--swatch-cyan-60)); /* 4.5:1 ratio */
+  --col-interactive-02: var(--color-interactive-02, var(--swatch-cyan-50)); /*   3:1 ratio */
+  --col-disabled: var(--color-disabled, var(--swatch-gray-30));
   --col-error: var(--color-error, var(--swatch-red-60));
   --col-success: var(--color-success, var(--swatch-lime-60));
 }
@@ -121,7 +118,7 @@
 }
 
 p {
-  margin-block-start: var(--spacing-sm);  
+  margin-block-start: var(--spacing-sm);
   margin-block-end: var(--spacing-md);
 }
 

@@ -4,6 +4,7 @@ import '../design/Style.css'
 import './Link.css'
 
 export interface LinkProps {
+  id: string,
   /**
    * Children for the link
   */
@@ -29,10 +30,12 @@ export interface LinkProps {
 }
 
 const Link = ({
+  id,
   children = 'Link',
   href = '#',
   target = '_self',
   classes = '',
+  disabled,
   inline,
   onClick,
   ...props
@@ -43,7 +46,7 @@ const Link = ({
       target={target}
       className={`link ${classes} ${classNames({
         'Inline': !!inline
-      })}`}
+      })}`.trim()}
       onClick={(e) => {
         if (!disabled && onClick) {
           onClick()

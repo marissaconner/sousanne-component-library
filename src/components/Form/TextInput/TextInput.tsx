@@ -26,6 +26,14 @@ export interface TextInputProps {
   */
   helperText?: string
   /**
+   * Provide an onChange handler
+  */
+  onChange?: (...params: any) => any
+  /**
+   * Provide an onClick handler
+  */
+  onClick?: (...params: any) => any
+  /**
   * Specify a placeholder value.
   */
   placeholderText?: string
@@ -39,13 +47,6 @@ export interface TextInputProps {
   status?: 'default' | 'valid' | 'error'
 }
 
-const showHelperText = function (...props) {
-  if (props.status === 'error') {
-    return !props.errorText // Prefer error text over helper text when present
-  }
-  return !!props.helperText
-}
-
 const TextInput = ({
   id,
   classes = '',
@@ -54,6 +55,8 @@ const TextInput = ({
   errorText = 'Please review your input.',
   helperText,
   labelText = 'Label',
+  onChange = () => {},
+  onClick = () => {},
   placeholderText = 'Placeholder',
   status,
   ...props
@@ -67,7 +70,7 @@ const TextInput = ({
       })}
     >
       <label
-        class="form-field_label"
+        className="form-field_label"
         htmlFor={id}
       >
         {labelText}
@@ -76,8 +79,13 @@ const TextInput = ({
         id={id}
         type="text"
         defaultValue={defaultValue}
-        status={status}
         disabled={disabled}
+        onChange={(e) => {
+          onChange(e)
+        }}
+        onClick={(e) => {
+          onClick(e)
+        }}
         placeholder={placeholderText}
         className={`form-field_control ${classes} ${classNames({
           'Valid' : status === 'valid',
@@ -85,7 +93,7 @@ const TextInput = ({
         })}`.trim()}
       />
       { helperText || status === 'error' ?
-        <p class="form-field_helpertext">
+        <p className="form-field_helpertext">
           {status === 'error' ? errorText : helperText }
         </p>
         :

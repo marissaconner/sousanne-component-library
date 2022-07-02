@@ -22,7 +22,7 @@
 }
 
 .button:focus {
-  box-shadow: 0px 0px 0 2px var(--col-background), -0px 0px 0 5px var(--col-interactive);
+  box-shadow: 0px 0px 0 2px var(--col-background), -0px 0px 0 5px var(--col-interactive-02);
   transition: 0.25s ease-in-out background-color,
                0.125s ease-in-out box-shadow,
                0.25s ease-in-out color;
@@ -53,8 +53,8 @@
 
 .button.Muted {
   background-color: transparent;
-  border-color: var(--col-interactive);
-  color: var(--col-interactive);
+  border-color: var(--col-interactive-01);
+  color: var(--col-interactive-01);
 }
 .button.Muted:hover {
   border-color: var(--col-button-hover);

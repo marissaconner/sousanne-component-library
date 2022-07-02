@@ -1,14 +1,17 @@
 {
-  "name": "component-library",
-  "version": "1.0.0",
+  "name": "@marissaconner/sousanne-component-library",
+  "version": "1.0.1",
   "description": "A component library",
-  "main": "index.js",
-  "module": "dist/esm/index.js",
+  "module": "dist/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/marissaconner"
+  },
   "files": [
     "dist"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
+    "build": "rollup -c && npx tsc --emitDeclarationOnly",
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",

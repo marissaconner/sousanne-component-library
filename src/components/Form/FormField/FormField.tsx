@@ -4,7 +4,7 @@ import '../../design/Style.css'
 import '../Form.css'
 
 export interface FormFieldProps {
-  children: React.Node
+  children: React.ReactNode
   classes?: string
   disabled?: boolean
   hasError?: boolean

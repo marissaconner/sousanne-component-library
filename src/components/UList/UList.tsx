@@ -4,6 +4,7 @@ import '../design/Style.css'
 import './UList.css'
 
 export interface UListProps {
+  id: string
   /**
    * Children for the list
   */
@@ -14,11 +15,12 @@ export interface UListProps {
 }
 
 const UList = ({
+  id,
   children,
   classes = '',
   ...props}: UListProps) => {
   return(
-    <ul className={`unordered-list ${classes}`}>
+    <ul className={`unordered-list ${classes}`.trim()}>
       {children}
     </ul>
   )

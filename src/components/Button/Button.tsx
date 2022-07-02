@@ -4,6 +4,7 @@ import '../design/Style.css'
 import './Button.css'
 
 export interface ButtonProps {
+  id: string
   /**
    * Button content.
    */
@@ -35,11 +36,12 @@ export interface ButtonProps {
 }
 
 const Button = ({
+  id,
   look,
   children,
   classes = '',
   disabled,
-  onClick,
+  onClick = () => {},
   role,
   tabIndex,
   type,
@@ -47,17 +49,13 @@ const Button = ({
   return(
     <button
       disabled={disabled}
-      onClick={(e) => {
-        if (!disabled && onClick) {
-          onClick()
-        }
-      }}
+      onClick={(e) => {onClick()}}
       className={`button ${classes} ${classNames({
         'Disabled': !!disabled,
         'Muted': look === 'muted',
         'Primary': look ==='primary',
         'Warning': look === 'warning'
-      })}`}
+      })}`.trim()}
       role={role}
       tabIndex={tabIndex}
       type={type}
