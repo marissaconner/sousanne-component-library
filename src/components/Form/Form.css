@@ -1,9 +1,9 @@
-.form-group {
+.form-field {
   display: flex;
   flex-direction: column;
 }
 
-.form-group_label {
+.form-field_label {
   font-size: var(--size-font-sm);
   font-weight: 700;
   margin-inline-end: var(--spacing-sm);
