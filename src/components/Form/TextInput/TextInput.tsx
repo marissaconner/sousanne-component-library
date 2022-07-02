@@ -1,14 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
 import '../../design/Style.css'
-import FormLabel from '../FormLabel/FormLabel'
 import FormField from '../FormField/FormField'
 
 export interface TextInputProps {
   /**
-   * The ID is used to specify the label
+   * Specify the unique ID of the input
   */
   id: string
+  labelText: string
   /** 
    * Optional additional styling
   */
@@ -19,26 +19,32 @@ export interface TextInputProps {
   disabled?: boolean
   /**
    * Determine which state to render the input box in.
-   */
+  */
   state?: 'default' | 'valid' | 'error'
   placeholderText?: string
+  /**
+   * Give the user additional instructions for assistance
+  */
+  helperText?: string
 }
 
 const TextInput = ({
   id,
   classes = '',
   disabled = false,
+  helperText,
+  labelText = 'Label',
   placeholderText = 'Placeholder',
   state,
   ...props
 }: TextInputProps) => {
   return(
     <FormField>
-      <FormLabel
-        htmlFor={id}
-      >
-        Label Text
-      </FormLabel>
+      <label
+        class='form-field_label'
+        htmlFor={id}>
+        {labelText}
+      </label>
       <input
         id={id}
         type="text"
@@ -51,6 +57,13 @@ const TextInput = ({
           'Error' : state === 'error'
         })}`}
       />
+      { helperText ? 
+        <p class="form-field_helpertext">
+          {helperText}
+        </p>
+        :
+        ''
+      }
     </FormField>
   )
 }

@@ -10,3 +10,8 @@ export default {
 const Template: ComponentStory<typeof TextInput> = (args) => <TextInput {...args} />
 
 export const Default = Template.bind({})
+Default.args = {
+  id: "example-id",
+  helperText: "Optional helper text goes here."
+
+}
