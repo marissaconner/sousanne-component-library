@@ -8,7 +8,7 @@ export interface FormLabelProps {
   /**
    * Indicate the HTML element ID to pair with the form label
    */
-  htmlFor: string
+  labelFor: string
   /** 
    * Optional additional styling
   * */
@@ -17,17 +17,15 @@ export interface FormLabelProps {
 
 const FormLabel = ({
   children,
-  htmlFor,
-  classes,
+  labelFor,
+  classes = '',
   ...props
 }: FormLabelProps) => {
   return(
     <label
-      htmlFor={htmlFor}
+      className={`form-field_label ${classes}`}
+      htmlFor={labelFor}
       type="text"
-      className={`form-group_label ${classes} ${classNames({
-        'Disabled': disabled
-      })}`}
     >
       {children}
     </label>

@@ -12,7 +12,7 @@ export interface FormFieldProps {
 
 const FormField = ({
   children,
-  classes,
+  classes = '',
   disabled,
   hasError,
   ...props

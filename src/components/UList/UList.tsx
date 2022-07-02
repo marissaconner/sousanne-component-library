@@ -15,7 +15,7 @@ export interface UListProps {
 
 const UList = ({
   children,
-  classes,
+  classes = '',
   ...props}: UListProps) => {
   return(
     <ul className={`unordered-list ${classes}`}>

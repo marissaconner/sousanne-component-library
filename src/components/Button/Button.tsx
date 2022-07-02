@@ -37,7 +37,7 @@ export interface ButtonProps {
 const Button = ({
   look,
   children,
-  classes,
+  classes = '',
   disabled,
   onClick,
   role,

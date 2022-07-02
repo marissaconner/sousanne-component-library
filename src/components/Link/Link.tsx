@@ -30,9 +30,9 @@ export interface LinkProps {
 
 const Link = ({
   children = 'Link',
-  href='#',
-  target='_self',
-  classes,
+  href = '#',
+  target = '_self',
+  classes = '',
   inline,
   onClick,
   ...props

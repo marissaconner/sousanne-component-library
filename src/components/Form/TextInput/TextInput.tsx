@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import '../../design/Style.css'
 import FormLabel from '../FormLabel/FormLabel'
+import FormField from '../FormField/FormField'
 
 export interface TextInputProps {
   /**
@@ -16,25 +17,41 @@ export interface TextInputProps {
    * A disabled TextInput renders, but is not interactable.
   */
   disabled?: boolean
+  /**
+   * Determine which state to render the input box in.
+   */
+  state?: 'default' | 'valid' | 'error'
+  placeholderText?: string
 }
 
 const TextInput = ({
   id,
-  classes,
+  classes = '',
   disabled = false,
+  placeholderText = 'Placeholder',
+  state,
   ...props
 }: TextInputProps) => {
   return(
-    <>
-      <FormLabel htmlFor={id}>Label Text</FormLabel>
-      <input  
+    <FormField>
+      <FormLabel
+        htmlFor={id}
+      >
+        Label Text
+      </FormLabel>
+      <input
+        id={id}
         type="text"
+        state={state}
         disabled={disabled}
-        className={`unordered-list ${classes} ${classNames({
-          'Disabled': disabled
+        placeholder={placeholderText}
+        className={`form-field_control ${classes} ${classNames({
+          'Disabled': disabled,
+          'Valid' : state === 'valid',
+          'Error' : state === 'error'
         })}`}
       />
-    </>
+    </FormField>
   )
 }
 
