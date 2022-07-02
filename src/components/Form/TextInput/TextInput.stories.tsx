@@ -5,6 +5,11 @@ import Link from '../Link/Link'
 export default {
   title: 'Components/TextInput',
   component: TextInput,
+  argTypes: {
+    defaultValue: {
+      control: { type: 'text' }
+    },
+  }
 } as ComponentMeta<typeof TextInput>
 
 const Template: ComponentStory<typeof TextInput> = (args) => <TextInput {...args} />

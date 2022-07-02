@@ -13,6 +13,10 @@ export interface TextInputProps {
    * Optional additional styling
   */
   classes?: string
+  /**
+   * If something should be rendered with a default value, put it here.
+   */
+  defaultValue?: string | number
   /** 
    * A disabled TextInput renders, but is not interactable.
   */
@@ -31,6 +35,7 @@ export interface TextInputProps {
 const TextInput = ({
   id,
   classes = '',
+  defaultValue,
   disabled = false,
   helperText,
   labelText = 'Label',
@@ -51,6 +56,7 @@ const TextInput = ({
         state={state}
         disabled={disabled}
         placeholder={placeholderText}
+        value={defaultValue}
         className={`form-field_control ${classes} ${classNames({
           'Disabled': disabled,
           'Valid' : state === 'valid',
