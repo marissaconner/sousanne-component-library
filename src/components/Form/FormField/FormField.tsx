@@ -22,7 +22,7 @@ const FormField = ({
       className={`form-field ${classes} ${classNames({
         'Disabled': disabled,
         'Error': hasError
-      })}`}
+      })}`.trim()}
     >
       {children}
     </div>

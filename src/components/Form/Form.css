@@ -10,6 +10,14 @@
   margin-bottom: var(--spacing-xs);
   letter-spacing: 0.5px
 }
+.form-field.Disabled .form-field_label,
+.form-field.Disabled .form-field_control,
+.form-field.Disabled .form-field_helpertext {
+  color: var(--col-disabled);
+}
+.form-field.Error .form-field_helpertext {
+  color: var(--col-error);
+}
 
 .form-field_control {
   width: 100%;

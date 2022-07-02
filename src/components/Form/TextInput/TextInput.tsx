@@ -22,14 +22,28 @@ export interface TextInputProps {
   */
   disabled?: boolean
   /**
-   * Determine which state to render the input box in.
-  */
-  state?: 'default' | 'valid' | 'error'
-  placeholderText?: string
-  /**
    * Give the user additional instructions for assistance
   */
   helperText?: string
+  /**
+  * Specify a placeholder value.
+  */
+  placeholderText?: string
+  /**
+   * Give a specific error message for form validation.
+   */
+  errorText?: string
+  /**
+   * Determine which status to render the input box in.
+  */
+  status?: 'default' | 'valid' | 'error'
+}
+
+const showHelperText = function (...props) {
+  if (props.status === 'error') {
+    return !props.errorText // Prefer error text over helper text when present
+  }
+  return !!props.helperText
 }
 
 const TextInput = ({
@@ -37,35 +51,42 @@ const TextInput = ({
   classes = '',
   defaultValue,
   disabled = false,
+  errorText = 'Please review your input.',
   helperText,
   labelText = 'Label',
   placeholderText = 'Placeholder',
-  state,
+  status,
   ...props
 }: TextInputProps) => {
+  
   return(
-    <FormField>
+    <FormField
+      classes={classNames({
+        'Disabled': disabled,
+        'Error': status === 'error'
+      })}
+    >
       <label
-        class='form-field_label'
-        htmlFor={id}>
+        class="form-field_label"
+        htmlFor={id}
+      >
         {labelText}
       </label>
       <input
         id={id}
         type="text"
-        state={state}
+        defaultValue={defaultValue}
+        status={status}
         disabled={disabled}
         placeholder={placeholderText}
-        value={defaultValue}
         className={`form-field_control ${classes} ${classNames({
-          'Disabled': disabled,
-          'Valid' : state === 'valid',
-          'Error' : state === 'error'
-        })}`}
+          'Valid' : status === 'valid',
+          'Error' : status === 'error'
+        })}`.trim()}
       />
-      { helperText ? 
+      { helperText || status === 'error' ?
         <p class="form-field_helpertext">
-          {helperText}
+          {status === 'error' ? errorText : helperText }
         </p>
         :
         ''
