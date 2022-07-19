@@ -101,7 +101,9 @@ const Modal = ({
   }
 
   const focusTrap = function () {
-    console.log("Don't forget to do a focus trap")
+    if (isOpen) {
+      document.querySelector(`#${id}`).focus()
+    }
   }
 
   const checkEscape = function (e: React.KeyBoardEvent<HTMLElement>) {
