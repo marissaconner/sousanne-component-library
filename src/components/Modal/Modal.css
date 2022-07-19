@@ -15,7 +15,7 @@
   opacity: 0;
   overflow: hidden;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .modal.Closed {
@@ -31,16 +31,26 @@
 
 .modal_content {
   display: block;
-  background-color: var(--col-background);
-  border:  1px solid var(--col-background-30);
-  padding:  var(--spacing-md);
 }
 
 .modal_header {
-  display: flex;
+  display: flex;  
   font-weight: 700;
   align-items: center;
+  padding: var(--spacing-md) var(--spacing-sm);
   justify-content: space-between;
+  background-color: var(--col-background);
+}
+
+.modal_body {
+  padding: var(--spacing-md) var(--spacing-sm);
+  background-color: var(--col-background);
+}
+
+.modal_footer {
+  width: 100%;
+  display: flex;
+  background-color: transparent;
 }
 
 .modal_close {
@@ -52,4 +62,11 @@
   margin: var(--spacing-sm);
   margin-inline-end: 0;
   position: relative;
+}
+
+.modal_close-button-container,
+.modal_action-button-container {
+  flex-grow: 1;
+  box-sizing: border-box;
+  background-color: var(--col-background);
 }

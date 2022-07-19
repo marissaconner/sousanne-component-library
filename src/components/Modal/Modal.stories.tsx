@@ -14,5 +14,7 @@ Default.args = {
   id: 'example',
   children: 'Ughhhhh',
   isOpen: true,
-  heading: 'Modal Example'
+  heading: 'Modal Example',
+  actionButtonLabel: 'hi',
+  onClose: () => { console.log('close')}
 }

@@ -5,9 +5,13 @@ import './Modal.css'
 import Button from '../Button'
 export interface ModalProps {
   /**
+   * Label for whatever the action the modal is associated with, eg 'save'.
+  */
+  actionButtonLabel?: string
+  /**
    * Required property for accessibility. This will be read by screen readers.
   */
-  'ariaLabel': string
+  ariaLabel: string
   /**
    * Children for the modal
   */
@@ -72,26 +76,50 @@ export interface ModalProps {
 }
 
 const Modal = ({
+  actionButtonLabel = '',
   ariaLabel = '',
   children,
   classes = '',
-  closeButtonLabel = 'close',
+  closeButtonLabel = 'Close',
   heading,
   isAlert,
   id,
   isOpen,
   isWarning,
-  onKeyDown = () => {},
-  onClose = () => {},
   onAction = () => {},
+  onClose = () => {},
+  onKeyDown = () => {},
+  persistent,
   size,
   scrolls,
   disabled,
   ...props
 }:ModalProps) => {
 
+  const doButtonBay = function () {
+    return actionButtonLabel
+  }
+
   const focusTrap = function () {
     console.log("Don't forget to do a focus trap")
+  }
+
+  const checkEscape = function (e: React.KeyBoardEvent<HTMLElement>) {
+    if (e.code === 'Escape') {
+      if (!persistent) {
+        onClose()
+      }
+    }
+  }
+
+  const checkClickOut = function(e: React.ClickEvent<HTMLElement>) {
+    const clickedNode = e.target
+    const classList = clickedNode.classList.value.split(' ')
+    if (classList.includes('modal')) { // then we are clicking outside of the content
+      if (!persistent) {
+        onClose()
+      }
+    }
   }
 
   return (
@@ -111,7 +139,8 @@ const Modal = ({
         })}`
           .trim()}
         id={id}
-        onClick={(e) => {onClick(e)}}
+        onClick={(e) => {checkClickOut(e)}}
+        onKeyUp={(e) => {checkEscape(e)}}
         onKeyDown={(e) => {onKeyDown(e)}}
         role={isAlert ? 'alertdialog' : 'dialog' }
         tabIndex="-1"
@@ -123,7 +152,7 @@ const Modal = ({
             <button
               type="button"
               className="modal_close"
-              onClick={(e) => {onClose(e)}}
+              onClick={() => {onClose()}}
               aria-label={closeButtonLabel}
             >
               &times;
@@ -132,15 +161,35 @@ const Modal = ({
           <div className="modal_body">
             {children}
           </div>
-          <div className="modal_footer">
-            <Button
-              id={`${id}-close`}
-              type="button"
-              onClick={(e) => {onClose(e)}}
-            >
-              {closeButtonLabel}
-            </Button>
-          </div>
+          {
+            doButtonBay() ?
+              (
+                <div className="modal_footer">
+                  <div className="modal_close-button-container">
+                    <Button
+                      id={`${id}-close`}
+                      type="button"
+                      onClick={() => {onClose()}}
+                      look="muted"
+                    >
+                      {closeButtonLabel}
+                    </Button>
+                  </div>
+                  <div className="modal_action-button-container">
+                    <Button
+                      id={`${id}-action`}
+                      type="button"
+                      onClick={() => {onAction()}}
+                      look="primary"
+                    >
+                      {actionButtonLabel}
+                    </Button>
+                  </div>
+                </div>
+              )
+              :
+              ''
+          }
         </div>
       </dialog>
       <div

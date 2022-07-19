@@ -6,11 +6,11 @@
   color:  var(--col-button-label);
   padding: var(--spacing-sm) var(--spacing-md);
   border:  2px solid transparent;
-  margin: -2px;
   transition: 0.25s ease-in-out background-color,
               0.25s ease-in-out border,
               0.25s ease-in-out color,
               0.25s ease-in-out box-shadow;
+  width: 100%;
 }
 
 .button:hover {
