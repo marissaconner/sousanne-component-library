@@ -31,7 +31,7 @@ export interface ModalProps {
   /**
    * For screen readers, which will read the modal differently if this is an alert.
   */
-  isAlert: bool
+  isAlert: boolean
   /**
    * DOM element ID of the top level node
   */
@@ -39,11 +39,11 @@ export interface ModalProps {
   /**
    * Whether the modal is open.
   */ 
-  isOpen: bool
+  isOpen: boolean
   /**
    * Designate that moving forward will delete data.
   */
-  isWarning: bool
+  isWarning: boolean
   /**
    * Handler for keypresses (down)
   */
@@ -102,11 +102,14 @@ const Modal = ({
 
   const focusTrap = function () {
     if (isOpen) {
-      document.querySelector(`#${id}`).focus()
+      const element = document.querySelector(`#${id}`) as HTMLElement
+      if (element) {
+        element.focus()
+      }
     }
   }
 
-  const checkEscape = function (e: React.KeyBoardEvent<HTMLElement>) {
+  const checkEscape = function (e: React.KeyboardEvent) {
     if (e.code === 'Escape') {
       if (!persistent) {
         onClose()
@@ -114,8 +117,8 @@ const Modal = ({
     }
   }
 
-  const checkClickOut = function(e: React.ClickEvent<HTMLElement>) {
-    const clickedNode = e.target
+  const checkClickOut = function(e: React.MouseEvent) {
+    const clickedNode = e.target as HTMLElement
     const classList = clickedNode.classList.value.split(' ')
     if (classList.includes('modal')) { // then we are clicking outside of the content
       if (!persistent) {
@@ -127,7 +130,7 @@ const Modal = ({
   return (
     <>
       <div
-        tabIndex="0"
+        tabIndex={0}
         onFocus={focusTrap}
       >
       </div>
@@ -145,7 +148,7 @@ const Modal = ({
         onKeyUp={(e) => {checkEscape(e)}}
         onKeyDown={(e) => {onKeyDown(e)}}
         role={isAlert ? 'alertdialog' : 'dialog' }
-        tabIndex="-1"
+        tabIndex={-1}
         open={isOpen}
       >
         <div className={`modal_content ${classNames({
@@ -200,7 +203,7 @@ const Modal = ({
         </div>
       </dialog>
       <div
-        tabIndex="0"
+        tabIndex={0}
         onFocus={focusTrap}
       >
       </div>
