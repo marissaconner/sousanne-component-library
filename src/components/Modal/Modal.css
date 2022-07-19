@@ -1,6 +1,6 @@
 .modal {
   display: flex;
-  justify-body: center;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -14,7 +14,8 @@
   background: none;
   opacity: 0;
   overflow: hidden;
-  z-index: 80;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal.Closed {

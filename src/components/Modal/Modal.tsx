@@ -2,12 +2,12 @@ import React from 'react'
 import classNames from 'classnames'
 import '../design/Style.css'
 import './Modal.css'
-
+import Button from '../Button'
 export interface ModalProps {
   /**
    * Required property for accessibility. This will be read by screen readers.
   */
-  'aria-label': string
+  'ariaLabel': string
   /**
    * Children for the modal
   */
@@ -72,9 +72,9 @@ export interface ModalProps {
 }
 
 const Modal = ({
-  ariaLabel,
+  ariaLabel = '',
   children,
-  classes,
+  classes = '',
   closeButtonLabel = 'close',
   heading,
   isAlert,
@@ -97,18 +97,24 @@ const Modal = ({
   return (
     <>
       <div
-        tabindex="0"
+        tabIndex="0"
         onFocus={focusTrap}
       >
       </div>
       <dialog
-        ariaHidden={!isOpen}
-        ariaLabel={ariaLabel}
-        className={`modal ${classes} ${isOpen? 'Open' : 'Closed'}`.trim()}
+        aria-hidden={!isOpen}
+        aria-label={ariaLabel ? ariaLabel : heading || 'Modal'}
+        className={`modal ${classes} ${classNames({
+          Open: isOpen,
+          Alert: isAlert,
+          Warning: isWarning
+        })}`
+          .trim()}
         id={id}
         onClick={(e) => {onClick(e)}}
+        onKeyDown={(e) => {onKeyDown(e)}}
         role={isAlert ? 'alertdialog' : 'dialog' }
-        tabindex="-1"
+        tabIndex="-1"
         open={isOpen}
       >
         <div className="modal_content">
@@ -117,19 +123,28 @@ const Modal = ({
             <button
               type="button"
               className="modal_close"
-              ariaLabel={ariaLabel}
               onClick={(e) => {onClose(e)}}
+              aria-label={closeButtonLabel}
             >
               &times;
             </button>
           </div>
           <div className="modal_body">
-          I'm modal content.
+            {children}
+          </div>
+          <div className="modal_footer">
+            <Button
+              id={`${id}-close`}
+              type="button"
+              onClick={(e) => {onClose(e)}}
+            >
+              {closeButtonLabel}
+            </Button>
           </div>
         </div>
       </dialog>
       <div
-        tabindex="0"
+        tabIndex="0"
         onFocus={focusTrap}
       >
       </div>
