@@ -1,10 +1,10 @@
 export const parameters = {
   backgrounds: {
-    default: 'sousanne',
+    default: 'dark',
     values: [
       {
-        name: 'sousanne',
-        value: '#fefefe'   
+        name: 'dark',
+        value: '#050505'   
       }
     ]
   },

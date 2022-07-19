@@ -147,7 +147,7 @@ const Modal = ({
         open={isOpen}
       >
         <div className={`modal_content ${classNames({
-          ExtraSmall: size === 'xs',
+          Scrolling: scrolls,
           Small: size === 'sm',
           Medium: size === 'md',
           Large: size === 'lg',

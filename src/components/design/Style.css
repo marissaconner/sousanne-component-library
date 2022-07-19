@@ -44,7 +44,7 @@
   --swatch-red-10: #fcf0f0;
 
   --swatch-white: #fff;
-  --swatch-black: #004040;
+  --swatch-black: #050505;
 
   --base-size: 1.16rem;
   --base-scaler: 1.6;
@@ -70,44 +70,97 @@
 
   --size-border-radius: var(--border-radius, var(--spacing-xs));
 
-  --col-text: var(--color-text, var(--swatch-gray-100));
-  --col-text-secondary: var(--color-text-secondary, var(--swatch-gray-60));
+  --theme-interface-00: var(--color-interface-00, var(--swatch-black));
+  --theme-interface-10: var(--color-interface-10, var(--swatch-gray-100));
+  --theme-interface-20: var(--color-interface-20, var(--swatch-gray-90));
+  --theme-interface-30: var(--color-interface-30, var(--swatch-gray-80));
+  --theme-interface-40: var(--color-interface-40, var(--swatch-gray-70));
+  --theme-interface-50: var(--color-interface-50, var(--swatch-gray-60));
+  --theme-interface-60: var(--color-interface-60, var(--swatch-gray-50));
+  --theme-interface-70: var(--color-interface-70, var(--swatch-gray-40));
+  --theme-interface-80: var(--color-interface-80, var(--swatch-gray-30));
+  --theme-interface-90: var(--color-interface-90, var(--swatch-gray-20));
+  --theme-interface-100: var(--color-interface-100, var(--swatch-gray-10));
 
-  --col-text: var(--color-text, var(--swatch-gray-80));
-  --col-text-inverse: var(--color-text-inverse, var(--swatch-white));
+  --theme-primary-00: var(--color-primary-00, var(--swatch-white));
+  --theme-primary-10: var(--color-primary-10, var(--swatch-cyan-100));
+  --theme-primary-20: var(--color-primary-20, var(--swatch-cyan-90));
+  --theme-primary-30: var(--color-primary-30, var(--swatch-cyan-80));
+  --theme-primary-40: var(--color-primary-40, var(--swatch-cyan-70));
+  --theme-primary-50: var(--color-primary-50, var(--swatch-cyan-60));
+  --theme-primary-60: var(--color-primary-60, var(--swatch-cyan-50));
+  --theme-primary-70: var(--color-primary-70, var(--swatch-cyan-40));
+  --theme-primary-80: var(--color-primary-80, var(--swatch-cyan-30));
+  --theme-primary-90: var(--color-primary-90, var(--swatch-cyan-20));
+  --theme-primary-100: var(--color-primary-100, var(--swatch-cyan-10));
 
-  --col-background: var(--color-background, var(--swatch-white));
-  --col-background-10: var(--color-background-10, var(--swatch-gray-10));
-  --col-background-20: var(--color-background-20, var(--swatch-gray-20));
-  --col-background-30: var(--color-background-30, var(--swatch-gray-30));
-  --col-background-40: var(--color-background-40, var(--swatch-gray-40));
-  --col-background-50: var(--color-background-50, var(--swatch-gray-50));
-  --col-background-60: var(--color-background-60, var(--swatch-gray-60));
-  --col-background-70: var(--color-background-70, var(--swatch-gray-70));
-  --col-background-80: var(--color-background-80, var(--swatch-gray-80));
-  --col-background-90: var(--color-background-90, var(--swatch-gray-90));
-  --col-background-100: var(--color-background-100, var(--swatch-gray-100));
+  --theme-secondary-00: var(--color-secondary-00, var(--swatch-white));
+  --theme-secondary-10: var(--color-secondary-10, var(--swatch-gray-100));
+  --theme-secondary-20: var(--color-secondary-20, var(--swatch-gray-90));
+  --theme-secondary-30: var(--color-secondary-30, var(--swatch-gray-80));
+  --theme-secondary-40: var(--color-secondary-40, var(--swatch-gray-70));
+  --theme-secondary-50: var(--color-secondary-50, var(--swatch-gray-60));
+  --theme-secondary-60: var(--color-secondary-60, var(--swatch-gray-50));
+  --theme-secondary-70: var(--color-secondary-70, var(--swatch-gray-40));
+  --theme-secondary-80: var(--color-secondary-80, var(--swatch-gray-30));
+  --theme-secondary-90: var(--color-secondary-90, var(--swatch-gray-20));
+  --theme-secondary-100: var(--color-secondary-100, var(--swatch-gray-10));
 
-  --col-button: var(--color-button, var(--swatch-cyan-20));
-  --col-button-hover: var(--color-button-hover, var(--swatch-cyan-30));
-  --col-button-active: var(--color-button-active, var(--swatch-cyan-30));
+  --theme-tertiary-00: var(--color-tertiary-00, var(--swatch-white));
+  --theme-tertiary-10: var(--color-tertiary-10, var(--swatch-red-100));
+  --theme-tertiary-20: var(--color-tertiary-20, var(--swatch-red-90));
+  --theme-tertiary-30: var(--color-tertiary-30, var(--swatch-red-80));
+  --theme-tertiary-40: var(--color-tertiary-40, var(--swatch-red-70));
+  --theme-tertiary-50: var(--color-tertiary-50, var(--swatch-red-60));
+  --theme-tertiary-60: var(--color-tertiary-60, var(--swatch-red-50));
+  --theme-tertiary-70: var(--color-tertiary-70, var(--swatch-red-40));
+  --theme-tertiary-80: var(--color-tertiary-80, var(--swatch-red-30));
+  --theme-tertiary-90: var(--color-tertiary-90, var(--swatch-red-20));
+  --theme-tertiary-100: var(--color-tertiary-100, var(--swatch-red-10));
+
+  --theme-success-00: var(--color-success-00, var(--swatch-white));
+  --theme-success-10: var(--color-success-10, var(--swatch-lime-100));
+  --theme-success-20: var(--color-success-20, var(--swatch-lime-90));
+  --theme-success-30: var(--color-success-30, var(--swatch-lime-80));
+  --theme-success-40: var(--color-success-40, var(--swatch-lime-70));
+  --theme-success-50: var(--color-success-50, var(--swatch-lime-60));
+  --theme-success-60: var(--color-success-60, var(--swatch-lime-50));
+  --theme-success-70: var(--color-success-70, var(--swatch-lime-40));
+  --theme-success-80: var(--color-success-80, var(--swatch-lime-30));
+  --theme-success-90: var(--color-success-90, var(--swatch-lime-20));
+  --theme-success-100: var(--color-success-100, var(--swatch-lime-10));
+
+  --col-text: var(--color-text, var(--theme-interface-110));
+  --col-text-secondary: var(--color-text-secondary, var(--theme-interface-60));
+
+  --col-text: var(--color-text, var(--theme-interface-100));
+  --col-text-inverse: var(--color-text-inverse, var(--theme-interface-00));
+
+  --col-background: var(--color-background, var(--theme-interface-00));
+  --col-backdrop: var(--color-background, var(--theme-interface-20));
+  --col-border: var(--color-background, var(--theme-interface-30));
+
+  --col-button: var(--color-button, var(--theme-secondary-20));
+  --col-button-hover: var(--color-button-hover, var(--theme-secondary-30));
+  --col-button-active: var(--color-button-active, var(--theme-secondary-30));
   --col-button-label: var(--color-button-label, var(--col-text));
 
-  --col-button-primary: var(--color-button-primary, var(--swatch-lime-60));
-  --col-button-primary-hover: var(--color-button-primary-hover, var(--swatch-lime-70));
-  --col-button-primary-active: var(--color-button-primary-active, var(--swatch-lime-70));
+  --col-button-primary: var(--color-button-primary, var(--theme-primary-60));
+  --col-button-primary-hover: var(--color-button-primary-hover, var(--theme-primary-70));
+  --col-button-primary-active: var(--color-button-primary-active, var(--theme-primary-70));
   --col-button-primary-label: var(--color-button-primary-label, var(--col-text-inverse));
 
-  --col-button-warning: var(--color-button-warning, var(--swatch-red-60));
-  --col-button-warning-hover: var(--color-button-warning-hover, var(--swatch-red-70));
-  --col-button-warning-active: var(--color-button-warning-active, var(--swatch-red-70));
+  --col-button-warning: var(--color-button-warning, var(--theme-tertiary-60));
+  --col-button-warning-hover: var(--color-button-warning-hover, var(--theme-tertiary-70));
+  --col-button-warning-active: var(--color-button-warning-active, var(--theme-tertiary-70));
   --col-button-warning-label: var(--color-button-warning-label, var(--col-text-inverse));
 
-  --col-interactive-01: var(--color-interactive-01, var(--swatch-cyan-60)); /* 4.5:1 ratio */
-  --col-interactive-02: var(--color-interactive-02, var(--swatch-cyan-50)); /*   3:1 ratio */
-  --col-disabled: var(--color-disabled, var(--swatch-gray-30));
-  --col-error: var(--color-error, var(--swatch-red-60));
-  --col-success: var(--color-success, var(--swatch-lime-60));
+  --col-interactive-01: var(--color-interactive-01, var(--theme-primary-60)); /* 4.5:1 ratio */
+  --col-interactive-01-hover: var(--color-interactive-01-hover, var(--theme-primary-70)); /* 4.5:1 ratio */
+  --col-interactive-02: var(--color-interactive-02, var(--theme-secondary-50)); /*   3:1 ratio */
+  --col-disabled: var(--color-disabled, var(--theme-interface-30));
+  --col-error: var(--color-error, var(--theme-tertiary-60));
+  --col-success: var(--color-success, var(--theme-success-60));
 }
 
 * {
@@ -131,4 +184,24 @@ bdi, bdo, s, kbd, wbr {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Tahoma,Verdana,Segoe,sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: var(--spacing-md);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--col-background-20);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--col-interactive-01)
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--col-interactive-01-hover)
 }

@@ -31,6 +31,7 @@
 
 .modal_content {
   display: block;
+  border: 1px solid var(--col-border);
 }
 .modal_content.Small {
   max-width: calc(var(--spacing-sm) * 25);
@@ -41,7 +42,6 @@
 .modal_content.Large {
   max-width: calc(var(--spacing-lg) * 25);
 }
-
 
 .modal_header {
   display: flex;  
@@ -56,12 +56,15 @@
 .modal_body {
   padding: var(--spacing-md);
   background-color: var(--col-background);
+  max-height: 75vh;
+  overflow-y: scroll;
 }
 
 .modal_footer {
+  padding-top: var(--spacing-md);
   width: 100%;
   display: flex;
-  background-color: transparent;
+  background-color: var(--col-background);
 }
 
 .modal_close {

@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />
 export const Default = Template.bind({})
 Default.args = {
   id: 'example',
-  children: 'Behold. I am modal.',
+  children: <div>Modal Content!</div>,
   isOpen: true,
   heading: 'Modal Example',
   actionButtonLabel: 'hi',
