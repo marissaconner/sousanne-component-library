@@ -49,7 +49,7 @@ const Button = ({
   return(
     <button
       disabled={disabled}
-      onClick={(e) => {onClick()}}
+      onClick={(e) => {onClick(e)}}
       className={`button ${classes} ${classNames({
         'Disabled': !!disabled,
         'Muted': look === 'muted',
