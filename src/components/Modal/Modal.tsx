@@ -63,7 +63,7 @@ export interface ModalProps {
   /**
    * Control width of modal.
   */
-  size?: 'xs' | 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg'
   /**
    * Specify if modal has scrolling content.
   * */
@@ -146,7 +146,12 @@ const Modal = ({
         tabIndex="-1"
         open={isOpen}
       >
-        <div className="modal_content">
+        <div className={`modal_content ${classNames({
+          ExtraSmall: size === 'xs',
+          Small: size === 'sm',
+          Medium: size === 'md',
+          Large: size === 'lg',
+        })}`.trim()}>
           <div className="modal_header">
             <span className="modal_title">{heading}</span>
             <button
