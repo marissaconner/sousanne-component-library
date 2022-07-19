@@ -4,7 +4,7 @@ import '../design/Style.css'
 import './Link.css'
 
 export interface LinkProps {
-  id: string,
+  id: string
   /**
    * Children for the link
   */
