@@ -33,10 +33,10 @@ const Icon = ({
   let opts = {} as { [key:string]: string }
   const svg = navigation[name]
   if (svg.fillRule) {
-    opts['fill-rule'] = svg.fillRule
+    opts['fillRule'] = svg.fillRule
   }
   if (svg.clipRule) {
-    opts['clip-rule'] = svg.clipRule
+    opts['clipRule'] = svg.clipRule
   }
   if (svg.d) {
     opts['d'] = svg.d

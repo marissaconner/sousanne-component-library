@@ -1,11 +1,11 @@
 .button {
-  font-size:  var(--size-font-md);
-  box-sizing:  border-box;
+  font-size: var(--size-font-md);
+  box-sizing: border-box;
   letter-spacing: 0.5px;
-  background-color:  var(--col-button);
-  color:  var(--col-button-label);
+  background-color: var(--col-button);
+  color: var(--col-button-label);
   padding: var(--spacing-sm) var(--spacing-md);
-  border:  2px solid transparent;
+  border: 1px solid transparent;
   transition: 0.25s ease-in-out background-color,
               0.25s ease-in-out border,
               0.25s ease-in-out color,
@@ -15,7 +15,7 @@
 
 .button:hover {
   background-color: var(--col-button-hover);
-  cursor:  pointer;
+  cursor: pointer;
   transition: 0.125s ease-in-out background-color,
               0.125s ease-in-out border,
               0.125s ease-in-out color;
@@ -69,7 +69,7 @@
 
 .button.Disabled {
   background-color: var(--col-disabled);
-  border-color:  var(--col-disabled);
-  color:  var(--col-text-on-70-to-100);
+  border-color: var(--col-disabled);
+  color: var(--col-text-on-70-to-100);
   pointer-events: none;
 }

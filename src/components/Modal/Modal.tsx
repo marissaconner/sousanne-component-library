@@ -25,15 +25,15 @@ export interface ModalProps {
   /**
    * Accessibility-minded label for the close button. Default is "close".
   */
-  closeButtonLabel: string
+  closeButtonLabel?: string
   /**
   * Set the content of the modal's header (title).
   */
-  heading: string
+  heading?: string
   /**
    * For screen readers, which will read the modal differently if this is an alert.
   */
-  isAlert: boolean
+  isAlert?: boolean
   /**
    * DOM element ID of the top level node
   */
@@ -45,11 +45,11 @@ export interface ModalProps {
   /**
    * Designate that moving forward will delete data.
   */
-  isWarning: boolean
+  isWarning?: boolean
   /**
    * Handler for keypresses (down)
   */
-  onKeyDown: (...params: any) => any
+  onKeyDown?: (...params: any) => any
   /**
    * Handler for closing a modal.  The handler passed in should change the `isOpen` property.
   */
@@ -57,11 +57,11 @@ export interface ModalProps {
   /**
    * Handler for confirming an interactive modal's intended action (such as submitting a form). The handler passed in should change the `isOpen` property.
   */
-  onAction: (...params: any) => any
+  onAction?: (...params: any) => any
   /**
   * If true, clicking outside the modal will not close the modal.
   */
-  persistent: boolean
+  persistent?: boolean
   /**
    * Control width of modal.
   */
