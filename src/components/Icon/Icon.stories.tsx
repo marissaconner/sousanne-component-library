@@ -12,5 +12,8 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />
 export const Default = Template.bind({})
 Default.args = {
   id: 'example',
-  name: 'close'
+  name: 'doubleLeft',
+  height: '36',
+  width: '36',
+  viewbox: '0 0 16 16'
 }

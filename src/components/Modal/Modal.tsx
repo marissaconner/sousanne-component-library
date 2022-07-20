@@ -2,7 +2,9 @@ import React from 'react'
 import classNames from 'classnames'
 import '../design/Style.css'
 import './Modal.css'
+import Icon from '../Icon'
 import Button from '../Button'
+
 export interface ModalProps {
   /**
    * Label for whatever the action the modal is associated with, eg 'save'.
@@ -165,7 +167,7 @@ const Modal = ({
               onClick={() => {onClose()}}
               aria-label={closeButtonLabel}
             >
-              &times;
+              <Icon id={`${id}-close-icon`} width="24" height="24" name="close" />
             </button>
           </div>
           <div className="modal_body">

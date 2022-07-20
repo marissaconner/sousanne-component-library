@@ -9,6 +9,9 @@ export default {
     defaultValue: {
       control: { type: 'text' }
     },
+    type: { 
+      control: { type: 'select' }
+    }
   }
 } as ComponentMeta<typeof TextInput>
 
@@ -18,5 +21,6 @@ export const Default = Template.bind({})
 Default.args = {
   id: "example-id",
   helperText: "Optional helper text goes here.",
-  defaultValue: "Default Value"
+  defaultValue: "Default Value",
+  type: "password"
 }

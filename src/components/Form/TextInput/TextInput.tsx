@@ -45,6 +45,10 @@ export interface TextInputProps {
    * Determine which status to render the input box in.
   */
   status?: 'default' | 'valid' | 'error'
+  /**
+   * Specify the input type.
+  */ 
+  type?: 'text' | 'number' | 'date' | 'datetime-local' | 'email' | 'password' | 'search' | 'tel'
 }
 
 const TextInput = ({
@@ -58,6 +62,7 @@ const TextInput = ({
   onChange = () => {},
   onClick = () => {},
   placeholderText = 'Placeholder',
+  type,
   status,
   ...props
 }: TextInputProps) => {
@@ -77,7 +82,7 @@ const TextInput = ({
       </label>
       <input
         id={id}
-        type="text"
+        type={type || 'text'}
         defaultValue={defaultValue}
         disabled={disabled}
         onChange={(e) => {
